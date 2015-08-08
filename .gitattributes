@@ -1,0 +1,4 @@
+.gitattributes eol=lf
+.gitignore eol=lf
+*.md eol=lf
+*.styl eol=lf
