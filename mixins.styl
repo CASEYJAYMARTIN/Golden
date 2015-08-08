@@ -1,9 +1,22 @@
+box-sizing(value)
+  if value == border-box
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
+
 display(value)
   if value == flex
     display -webkit-box
     display -webkit-flex
     display -ms-flexbox
     display flex
+
+flex(flex-grow, flex-shrink, flex-basis)
+  -webkit-box-flex flex-grow flex-shrink flex-basis
+  -webkit-flex flex-grow flex-shrink flex-basis
+  -moz-box-flex flex-grow flex-shrink flex-basis
+  -ms-flex flex-grow flex-shrink flex-basis
+  flex flex-grow flex-shrink flex-basis
 
 flex-wrap(value)
   if value == wrap
