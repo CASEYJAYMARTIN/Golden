@@ -11,12 +11,22 @@ display(value)
     display -ms-flexbox
     display flex
 
-flex(flex-grow, flex-shrink, flex-basis)
-  -webkit-box-flex flex-grow flex-shrink flex-basis
-  -webkit-flex flex-grow flex-shrink flex-basis
-  -moz-box-flex flex-grow flex-shrink flex-basis
-  -ms-flex flex-grow flex-shrink flex-basis
-  flex flex-grow flex-shrink flex-basis
+flex()
+  -webkit-box-flex arguments
+  -webkit-flex arguments
+  -moz-box-flex arguments
+  -ms-flex arguments
+  flex arguments
+
+flex-direction(value)
+  if value == column
+    -webkit-box-orient vertical
+    -webkit-box-direction normal
+    -webkit-flex-direction column
+    -moz-box-orient vertical
+    -moz-box-direction normal
+    -ms-flex-direction column
+    flex-direction column
 
 flex-wrap(value)
   if value == wrap
