@@ -3,649 +3,654 @@
 @require variables
 
 *, *:after, *:before
-  box-sizing border-box
+ box-sizing border-box
 
 .row
-  display flex
-  flex-wrap wrap
-  padding 0 rowGutter(gutter)
+ display flex
+ flex-direction row
+ flex-wrap wrap
+ padding 0 rowGutter(gutter)
 .row:first-child
-  padding rowGutter(gutter) rowGutter(gutter) 0 rowGutter(gutter)
+ padding rowGutter(gutter) rowGutter(gutter) 0 rowGutter(gutter)
 .row:last-child
-  padding 0 rowGutter(gutter) rowGutter(gutter) rowGutter(gutter)
+ padding 0 rowGutter(gutter) rowGutter(gutter) rowGutter(gutter)
 .row:after
-  content ""
-  display table
-  clear both
+ content ""
+ display table
+ clear both
+.row-reverse
+ flex-direction row-reverse
 
 .col
-  display flex
-  flex 1
-  flex-direction(column)
-  float left
-  padding colGutter(gutter)
+ display flex
+ flex 1
+ flex-direction(column)
+ float left
+ padding colGutter(gutter)
+.col-reverse
+ flex-direction column-reverse
 
 /* Extra Small Breakpoint */
 @media (min-width: 1px)
-  // Extra Small Column Size
-  .xs-sz-1
-    flex 0 1 4.166666666666666%
-    width 4.166666666666666%
-  .xs-sz-2
-    flex 0 1 8.333333333333333%
-    width 8.333333333333333%
-  .xs-sz-3
-    flex 0 1 12.5%
-    width 12.5%
-  .xs-sz-4
-    flex 0 1 16.666666666666666%
-    width 16.666666666666666%
-  .xs-sz-5
-    flex 0 1 20.833333333333333%
-    width 20.833333333333333%
-  .xs-sz-6
-    flex 0 1 25%
-    width 25%
-  .xs-sz-7
-    flex 0 1 29.166666666666666%
-    width 29.166666666666666%
-  .xs-sz-8
-    flex 0 1 33.333333333333333%
-    width 33.333333333333333%
-  .xs-sz-9
-    flex 0 1 37.5%
-    width 37.5%
-  .xs-sz-10
-    flex 0 1 41.666666666666666%
-    width 41.666666666666666%
-  .xs-sz-11
-    flex 0 1 45.833333333333333%
-    width 45.833333333333333%
-  .xs-sz-12
-    flex 0 1 50%
-    width 50%
-  .xs-sz-13
-    flex 0 1 54.166666666666666%
-    width 54.166666666666666%
-  .xs-sz-14
-    flex 0 1 58.333333333333333%
-    width 58.333333333333333%
-  .xs-sz-15
-    flex 0 1 62.5%
-    width 62.5%
-  .xs-sz-16
-    flex 0 1 66.666666666666666%
-    width 66.666666666666666%
-  .xs-sz-17
-    flex 0 1 70.833333333333333%
-    width 70.833333333333333%
-  .xs-sz-18
-    flex 0 1 75%
-    width 75%
-  .xs-sz-19
-    flex 0 1 79.166666666666666%
-    width 79.166666666666666%
-  .xs-sz-20
-    flex 0 1 83.333333333333333%
-    width 83.333333333333333%
-  .xs-sz-21
-    flex 0 1 87.5%
-    width 87.5%
-  .xs-sz-22
-    flex 0 1 91.666666666666666%
-    width 91.666666666666666%
-  .xs-sz-23
-    flex 0 1 95.833333333333333%
-    width 95.833333333333333%
-  .xs-sz-24
-    flex 0 1 100%
-    width 100%
-  // Extra Small Column Order
-  .xs-or-1
-    order -24
-  .xs-or-2
-    order -23
-  .xs-or-3
-    order -22
-  .xs-or-4
-    order -21
-  .xs-or-5
-    order 20
-  .xs-or-6
-    order -19
-  .xs-or-7
-    order -18
-  .xs-or-8
-    order -17
-  .xs-or-9
-    order -16
-  .xs-or-10
-    order -15
-  .xs-or-11
-    order -14
-  .xs-or-12
-    order -13
-  .xs-or-13
-    order -12
-  .xs-or-14
-    order -11
-  .xs-or-15
-    order -10
-  .xs-or-16
-    order -9
-  .xs-or-17
-    order -8
-  .xs-or-18
-    order -7
-  .xs-or-19
-    order -6
-  .xs-or-20
-    order -5
-  .xs-or-21
-    order -4
-  .xs-or-22
-    order -3
-  .xs-or-23
-    order -2
-  .xs-or-24
-    order -1
+ // Extra Small Column Size
+ .xs-sz-1
+  flex 0 1 4.166666666666666%
+  width 4.166666666666666%
+ .xs-sz-2
+  flex 0 1 8.333333333333333%
+  width 8.333333333333333%
+ .xs-sz-3
+  flex 0 1 12.5%
+  width 12.5%
+ .xs-sz-4
+  flex 0 1 16.666666666666666%
+  width 16.666666666666666%
+ .xs-sz-5
+  flex 0 1 20.833333333333333%
+  width 20.833333333333333%
+ .xs-sz-6
+  flex 0 1 25%
+  width 25%
+ .xs-sz-7
+  flex 0 1 29.166666666666666%
+  width 29.166666666666666%
+ .xs-sz-8
+  flex 0 1 33.333333333333333%
+  width 33.333333333333333%
+ .xs-sz-9
+  flex 0 1 37.5%
+  width 37.5%
+ .xs-sz-10
+  flex 0 1 41.666666666666666%
+  width 41.666666666666666%
+ .xs-sz-11
+  flex 0 1 45.833333333333333%
+  width 45.833333333333333%
+ .xs-sz-12
+  flex 0 1 50%
+  width 50%
+ .xs-sz-13
+  flex 0 1 54.166666666666666%
+  width 54.166666666666666%
+ .xs-sz-14
+  flex 0 1 58.333333333333333%
+  width 58.333333333333333%
+ .xs-sz-15
+  flex 0 1 62.5%
+  width 62.5%
+ .xs-sz-16
+  flex 0 1 66.666666666666666%
+  width 66.666666666666666%
+ .xs-sz-17
+  flex 0 1 70.833333333333333%
+  width 70.833333333333333%
+ .xs-sz-18
+  flex 0 1 75%
+  width 75%
+ .xs-sz-19
+  flex 0 1 79.166666666666666%
+  width 79.166666666666666%
+ .xs-sz-20
+  flex 0 1 83.333333333333333%
+  width 83.333333333333333%
+ .xs-sz-21
+  flex 0 1 87.5%
+  width 87.5%
+ .xs-sz-22
+  flex 0 1 91.666666666666666%
+  width 91.666666666666666%
+ .xs-sz-23
+  flex 0 1 95.833333333333333%
+  width 95.833333333333333%
+ .xs-sz-24
+  flex 0 1 100%
+  width 100%
+ // Extra Small Column Order
+ .xs-or-1
+  order -24
+ .xs-or-2
+  order -23
+ .xs-or-3
+  order -22
+ .xs-or-4
+  order -21
+ .xs-or-5
+  order 20
+ .xs-or-6
+  order -19
+ .xs-or-7
+  order -18
+ .xs-or-8
+  order -17
+ .xs-or-9
+  order -16
+ .xs-or-10
+  order -15
+ .xs-or-11
+  order -14
+ .xs-or-12
+  order -13
+ .xs-or-13
+  order -12
+ .xs-or-14
+  order -11
+ .xs-or-15
+  order -10
+ .xs-or-16
+  order -9
+ .xs-or-17
+  order -8
+ .xs-or-18
+  order -7
+ .xs-or-19
+  order -6
+ .xs-or-20
+  order -5
+ .xs-or-21
+  order -4
+ .xs-or-22
+  order -3
+ .xs-or-23
+  order -2
+ .xs-or-24
+  order -1
 
 /* Small Breakpoint */
 @media (min-width: smBreakpoint)
-  // Small Column Size
-  .sm-sz-1
-    flex 0 1 4.166666666666666%
-    width 4.166666666666666%
-  .sm-sz-2
-    flex 0 1 8.333333333333333%
-    width 8.333333333333333%
-  .sm-sz-3
-    flex 0 1 12.5%
-    width 12.5%
-  .sm-sz-4
-    flex 0 1 16.666666666666666%
-    width 16.666666666666666%
-  .sm-sz-5
-    flex 0 1 20.833333333333333%
-    width 20.833333333333333%
-  .sm-sz-6
-    flex 0 1 25%
-    width 25%
-  .sm-sz-7
-    flex 0 1 29.166666666666666%
-    width 29.166666666666666%
-  .sm-sz-8
-    flex 0 1 33.333333333333333%
-    width 33.333333333333333%
-  .sm-sz-9
-    flex 0 1 37.5%
-    width 37.5%
-  .sm-sz-10
-    flex 0 1 41.666666666666666%
-    width 41.666666666666666%
-  .sm-sz-11
-    flex 0 1 45.833333333333333%
-    width 45.833333333333333%
-  .sm-sz-12
-    flex 0 1 50%
-    width 50%
-  .sm-sz-13
-    flex 0 1 54.166666666666666%
-    width 54.166666666666666%
-  .sm-sz-14
-    flex 0 1 58.333333333333333%
-    width 58.333333333333333%
-  .sm-sz-15
-    flex 0 1 62.5%
-    width 62.5%
-  .sm-sz-16
-    flex 0 1 66.666666666666666%
-    width 66.666666666666666%
-  .sm-sz-17
-    flex 0 1 70.833333333333333%
-    width 70.833333333333333%
-  .sm-sz-18
-    flex 0 1 75%
-    width 75%
-  .sm-sz-19
-    flex 0 1 79.166666666666666%
-    width 79.166666666666666%
-  .sm-sz-20
-    flex 0 1 83.333333333333333%
-    width 83.333333333333333%
-  .sm-sz-21
-    flex 0 1 87.5%
-    width 87.5%
-  .sm-sz-22
-    flex 0 1 91.666666666666666%
-    width 91.666666666666666%
-  .sm-sz-23
-    flex 0 1 95.833333333333333%
-    width 95.833333333333333%
-  .sm-sz-24
-    flex 0 1 100%
-    width 100%
-  // Small Column Order
-  .sm-or-1
-    order -24
-  .sm-or-2
-    order -23
-  .sm-or-3
-    order -22
-  .sm-or-4
-    order -21
-  .sm-or-5
-    order 20
-  .sm-or-6
-    order -19
-  .sm-or-7
-    order -18
-  .sm-or-8
-    order -17
-  .sm-or-9
-    order -16
-  .sm-or-10
-    order -15
-  .sm-or-11
-    order -14
-  .sm-or-12
-    order -13
-  .sm-or-13
-    order -12
-  .sm-or-14
-    order -11
-  .sm-or-15
-    order -10
-  .sm-or-16
-    order -9
-  .sm-or-17
-    order -8
-  .sm-or-18
-    order -7
-  .sm-or-19
-    order -6
-  .sm-or-20
-    order -5
-  .sm-or-21
-    order -4
-  .sm-or-22
-    order -3
-  .sm-or-23
-    order -2
-  .sm-or-24
-    order -1
+ // Small Column Size
+ .sm-sz-1
+  flex 0 1 4.166666666666666%
+  width 4.166666666666666%
+ .sm-sz-2
+  flex 0 1 8.333333333333333%
+  width 8.333333333333333%
+ .sm-sz-3
+  flex 0 1 12.5%
+  width 12.5%
+ .sm-sz-4
+  flex 0 1 16.666666666666666%
+  width 16.666666666666666%
+ .sm-sz-5
+  flex 0 1 20.833333333333333%
+  width 20.833333333333333%
+ .sm-sz-6
+  flex 0 1 25%
+  width 25%
+ .sm-sz-7
+  flex 0 1 29.166666666666666%
+  width 29.166666666666666%
+ .sm-sz-8
+  flex 0 1 33.333333333333333%
+  width 33.333333333333333%
+ .sm-sz-9
+  flex 0 1 37.5%
+  width 37.5%
+ .sm-sz-10
+  flex 0 1 41.666666666666666%
+  width 41.666666666666666%
+ .sm-sz-11
+  flex 0 1 45.833333333333333%
+  width 45.833333333333333%
+ .sm-sz-12
+  flex 0 1 50%
+  width 50%
+ .sm-sz-13
+  flex 0 1 54.166666666666666%
+  width 54.166666666666666%
+ .sm-sz-14
+  flex 0 1 58.333333333333333%
+  width 58.333333333333333%
+ .sm-sz-15
+  flex 0 1 62.5%
+  width 62.5%
+ .sm-sz-16
+  flex 0 1 66.666666666666666%
+  width 66.666666666666666%
+ .sm-sz-17
+  flex 0 1 70.833333333333333%
+  width 70.833333333333333%
+ .sm-sz-18
+  flex 0 1 75%
+  width 75%
+ .sm-sz-19
+  flex 0 1 79.166666666666666%
+  width 79.166666666666666%
+ .sm-sz-20
+  flex 0 1 83.333333333333333%
+  width 83.333333333333333%
+ .sm-sz-21
+  flex 0 1 87.5%
+  width 87.5%
+ .sm-sz-22
+  flex 0 1 91.666666666666666%
+  width 91.666666666666666%
+ .sm-sz-23
+  flex 0 1 95.833333333333333%
+  width 95.833333333333333%
+ .sm-sz-24
+  flex 0 1 100%
+  width 100%
+ // Small Column Order
+ .sm-or-1
+  order -24
+ .sm-or-2
+  order -23
+ .sm-or-3
+  order -22
+ .sm-or-4
+  order -21
+ .sm-or-5
+  order 20
+ .sm-or-6
+  order -19
+ .sm-or-7
+  order -18
+ .sm-or-8
+  order -17
+ .sm-or-9
+  order -16
+ .sm-or-10
+  order -15
+ .sm-or-11
+  order -14
+ .sm-or-12
+  order -13
+ .sm-or-13
+  order -12
+ .sm-or-14
+  order -11
+ .sm-or-15
+  order -10
+ .sm-or-16
+  order -9
+ .sm-or-17
+  order -8
+ .sm-or-18
+  order -7
+ .sm-or-19
+  order -6
+ .sm-or-20
+  order -5
+ .sm-or-21
+  order -4
+ .sm-or-22
+  order -3
+ .sm-or-23
+  order -2
+ .sm-or-24
+  order -1
 
 /* Medium Breakpoint */
 @media (min-width: mdBreakpoint)
-  // Medium Column Size
-  .md-sz-1
-    flex 0 1 4.166666666666666%
-    width 4.166666666666666%
-  .md-sz-2
-    flex 0 1 8.333333333333333%
-    width 8.333333333333333%
-  .md-sz-3
-    flex 0 1 12.5%
-    width 12.5%
-  .md-sz-4
-    flex 0 1 16.666666666666666%
-    width 16.666666666666666%
-  .md-sz-5
-    flex 0 1 20.833333333333333%
-    width 20.833333333333333%
-  .md-sz-6
-    flex 0 1 25%
-    width 25%
-  .md-sz-7
-    flex 0 1 29.166666666666666%
-    width 29.166666666666666%
-  .md-sz-8
-    flex 0 1 33.333333333333333%
-    width 33.333333333333333%
-  .md-sz-9
-    flex 0 1 37.5%
-    width 37.5%
-  .md-sz-10
-    flex 0 1 41.666666666666666%
-    width 41.666666666666666%
-  .md-sz-11
-    flex 0 1 45.833333333333333%
-    width 45.833333333333333%
-  .md-sz-12
-    flex 0 1 50%
-    width 50%
-  .md-sz-13
-    flex 0 1 54.166666666666666%
-    width 54.166666666666666%
-  .md-sz-14
-    flex 0 1 58.333333333333333%
-    width 58.333333333333333%
-  .md-sz-15
-    flex 0 1 62.5%
-    width 62.5%
-  .md-sz-16
-    flex 0 1 66.666666666666666%
-    width 66.666666666666666%
-  .md-sz-17
-    flex 0 1 70.833333333333333%
-    width 70.833333333333333%
-  .md-sz-18
-    flex 0 1 75%
-    width 75%
-  .md-sz-19
-    flex 0 1 79.166666666666666%
-    width 79.166666666666666%
-  .md-sz-20
-    flex 0 1 83.333333333333333%
-    width 83.333333333333333%
-  .md-sz-21
-    flex 0 1 87.5%
-    width 87.5%
-  .md-sz-22
-    flex 0 1 91.666666666666666%
-    width 91.666666666666666%
-  .md-sz-23
-    flex 0 1 95.833333333333333%
-    width 95.833333333333333%
-  .md-sz-24
-    flex 0 1 100%
-    width 100%
-  // Medium Column Order
-  .md-or-1
-    order -24
-  .md-or-2
-    order -23
-  .md-or-3
-    order -22
-  .md-or-4
-    order -21
-  .md-or-5
-    order 20
-  .md-or-6
-    order -19
-  .md-or-7
-    order -18
-  .md-or-8
-    order -17
-  .md-or-9
-    order -16
-  .md-or-10
-    order -15
-  .md-or-11
-    order -14
-  .md-or-12
-    order -13
-  .md-or-13
-    order -12
-  .md-or-14
-    order -11
-  .md-or-15
-    order -10
-  .md-or-16
-    order -9
-  .md-or-17
-    order -8
-  .md-or-18
-    order -7
-  .md-or-19
-    order -6
-  .md-or-20
-    order -5
-  .md-or-21
-    order -4
-  .md-or-22
-    order -3
-  .md-or-23
-    order -2
-  .md-or-24
-    order -1
+ // Medium Column Size
+ .md-sz-1
+  flex 0 1 4.166666666666666%
+  width 4.166666666666666%
+ .md-sz-2
+  flex 0 1 8.333333333333333%
+  width 8.333333333333333%
+ .md-sz-3
+  flex 0 1 12.5%
+  width 12.5%
+ .md-sz-4
+  flex 0 1 16.666666666666666%
+  width 16.666666666666666%
+ .md-sz-5
+  flex 0 1 20.833333333333333%
+  width 20.833333333333333%
+ .md-sz-6
+  flex 0 1 25%
+  width 25%
+ .md-sz-7
+  flex 0 1 29.166666666666666%
+  width 29.166666666666666%
+ .md-sz-8
+  flex 0 1 33.333333333333333%
+  width 33.333333333333333%
+ .md-sz-9
+  flex 0 1 37.5%
+  width 37.5%
+ .md-sz-10
+  flex 0 1 41.666666666666666%
+  width 41.666666666666666%
+ .md-sz-11
+  flex 0 1 45.833333333333333%
+  width 45.833333333333333%
+ .md-sz-12
+  flex 0 1 50%
+  width 50%
+ .md-sz-13
+  flex 0 1 54.166666666666666%
+  width 54.166666666666666%
+ .md-sz-14
+  flex 0 1 58.333333333333333%
+  width 58.333333333333333%
+ .md-sz-15
+  flex 0 1 62.5%
+  width 62.5%
+ .md-sz-16
+  flex 0 1 66.666666666666666%
+  width 66.666666666666666%
+ .md-sz-17
+  flex 0 1 70.833333333333333%
+  width 70.833333333333333%
+ .md-sz-18
+  flex 0 1 75%
+  width 75%
+ .md-sz-19
+  flex 0 1 79.166666666666666%
+  width 79.166666666666666%
+ .md-sz-20
+  flex 0 1 83.333333333333333%
+  width 83.333333333333333%
+ .md-sz-21
+  flex 0 1 87.5%
+  width 87.5%
+ .md-sz-22
+  flex 0 1 91.666666666666666%
+  width 91.666666666666666%
+ .md-sz-23
+  flex 0 1 95.833333333333333%
+  width 95.833333333333333%
+ .md-sz-24
+  flex 0 1 100%
+  width 100%
+ // Medium Column Order
+ .md-or-1
+  order -24
+ .md-or-2
+  order -23
+ .md-or-3
+  order -22
+ .md-or-4
+  order -21
+ .md-or-5
+  order 20
+ .md-or-6
+  order -19
+ .md-or-7
+  order -18
+ .md-or-8
+  order -17
+ .md-or-9
+  order -16
+ .md-or-10
+  order -15
+ .md-or-11
+  order -14
+ .md-or-12
+  order -13
+ .md-or-13
+  order -12
+ .md-or-14
+  order -11
+ .md-or-15
+  order -10
+ .md-or-16
+  order -9
+ .md-or-17
+  order -8
+ .md-or-18
+  order -7
+ .md-or-19
+  order -6
+ .md-or-20
+  order -5
+ .md-or-21
+  order -4
+ .md-or-22
+  order -3
+ .md-or-23
+  order -2
+ .md-or-24
+  order -1
 
 /* Large Breakpoint */
 @media (min-width: lgBreakpoint)
-  // Large Column Size
-  .lg-sz-1
-    flex 0 1 4.166666666666666%
-    width 4.166666666666666%
-  .lg-sz-2
-    flex 0 1 8.333333333333333%
-    width 8.333333333333333%
-  .lg-sz-3
-    flex 0 1 12.5%
-    width 12.5%
-  .lg-sz-4
-    flex 0 1 16.666666666666666%
-    width 16.666666666666666%
-  .lg-sz-5
-    flex 0 1 20.833333333333333%
-    width 20.833333333333333%
-  .lg-sz-6
-    flex 0 1 25%
-    width 25%
-  .lg-sz-7
-    flex 0 1 29.166666666666666%
-    width 29.166666666666666%
-  .lg-sz-8
-    flex 0 1 33.333333333333333%
-    width 33.333333333333333%
-  .lg-sz-9
-    flex 0 1 37.5%
-    width 37.5%
-  .lg-sz-10
-    flex 0 1 41.666666666666666%
-    width 41.666666666666666%
-  .lg-sz-11
-    flex 0 1 45.833333333333333%
-    width 45.833333333333333%
-  .lg-sz-12
-    flex 0 1 50%
-    width 50%
-  .lg-sz-13
-    flex 0 1 54.166666666666666%
-    width 54.166666666666666%
-  .lg-sz-14
-    flex 0 1 58.333333333333333%
-    width 58.333333333333333%
-  .lg-sz-15
-    flex 0 1 62.5%
-    width 62.5%
-  .lg-sz-16
-    flex 0 1 66.666666666666666%
-    width 66.666666666666666%
-  .lg-sz-17
-    flex 0 1 70.833333333333333%
-    width 70.833333333333333%
-  .lg-sz-18
-    flex 0 1 75%
-    width 75%
-  .lg-sz-19
-    flex 0 1 79.166666666666666%
-    width 79.166666666666666%
-  .lg-sz-20
-    flex 0 1 83.333333333333333%
-    width 83.333333333333333%
-  .lg-sz-21
-    flex 0 1 87.5%
-    width 87.5%
-  .lg-sz-22
-    flex 0 1 91.666666666666666%
-    width 91.666666666666666%
-  .lg-sz-23
-    flex 0 1 95.833333333333333%
-    width 95.833333333333333%
-  .lg-sz-24
-    flex 0 1 100%
-    width 100%
-  // Large Column Order
-  .lg-or-1
-    order -24
-  .lg-or-2
-    order -23
-  .lg-or-3
-    order -22
-  .lg-or-4
-    order -21
-  .lg-or-5
-    order 20
-  .lg-or-6
-    order -19
-  .lg-or-7
-    order -18
-  .lg-or-8
-    order -17
-  .lg-or-9
-    order -16
-  .lg-or-10
-    order -15
-  .lg-or-11
-    order -14
-  .lg-or-12
-    order -13
-  .lg-or-13
-    order -12
-  .lg-or-14
-    order -11
-  .lg-or-15
-    order -10
-  .lg-or-16
-    order -9
-  .lg-or-17
-    order -8
-  .lg-or-18
-    order -7
-  .lg-or-19
-    order -6
-  .lg-or-20
-    order -5
-  .lg-or-21
-    order -4
-  .lg-or-22
-    order -3
-  .lg-or-23
-    order -2
-  .lg-or-24
-    order -1
+ // Large Column Size
+ .lg-sz-1
+  flex 0 1 4.166666666666666%
+  width 4.166666666666666%
+ .lg-sz-2
+  flex 0 1 8.333333333333333%
+  width 8.333333333333333%
+ .lg-sz-3
+  flex 0 1 12.5%
+  width 12.5%
+ .lg-sz-4
+  flex 0 1 16.666666666666666%
+  width 16.666666666666666%
+ .lg-sz-5
+  flex 0 1 20.833333333333333%
+  width 20.833333333333333%
+ .lg-sz-6
+  flex 0 1 25%
+  width 25%
+ .lg-sz-7
+  flex 0 1 29.166666666666666%
+  width 29.166666666666666%
+ .lg-sz-8
+  flex 0 1 33.333333333333333%
+  width 33.333333333333333%
+ .lg-sz-9
+  flex 0 1 37.5%
+  width 37.5%
+ .lg-sz-10
+  flex 0 1 41.666666666666666%
+  width 41.666666666666666%
+ .lg-sz-11
+  flex 0 1 45.833333333333333%
+  width 45.833333333333333%
+ .lg-sz-12
+  flex 0 1 50%
+  width 50%
+ .lg-sz-13
+  flex 0 1 54.166666666666666%
+  width 54.166666666666666%
+ .lg-sz-14
+  flex 0 1 58.333333333333333%
+  width 58.333333333333333%
+ .lg-sz-15
+  flex 0 1 62.5%
+  width 62.5%
+ .lg-sz-16
+  flex 0 1 66.666666666666666%
+  width 66.666666666666666%
+ .lg-sz-17
+  flex 0 1 70.833333333333333%
+  width 70.833333333333333%
+ .lg-sz-18
+  flex 0 1 75%
+  width 75%
+ .lg-sz-19
+  flex 0 1 79.166666666666666%
+  width 79.166666666666666%
+ .lg-sz-20
+  flex 0 1 83.333333333333333%
+  width 83.333333333333333%
+ .lg-sz-21
+  flex 0 1 87.5%
+  width 87.5%
+ .lg-sz-22
+  flex 0 1 91.666666666666666%
+  width 91.666666666666666%
+ .lg-sz-23
+  flex 0 1 95.833333333333333%
+  width 95.833333333333333%
+ .lg-sz-24
+  flex 0 1 100%
+  width 100%
+ // Large Column Order
+ .lg-or-1
+  order -24
+ .lg-or-2
+  order -23
+ .lg-or-3
+  order -22
+ .lg-or-4
+  order -21
+ .lg-or-5
+  order 20
+ .lg-or-6
+  order -19
+ .lg-or-7
+  order -18
+ .lg-or-8
+  order -17
+ .lg-or-9
+  order -16
+ .lg-or-10
+  order -15
+ .lg-or-11
+  order -14
+ .lg-or-12
+  order -13
+ .lg-or-13
+  order -12
+ .lg-or-14
+  order -11
+ .lg-or-15
+  order -10
+ .lg-or-16
+  order -9
+ .lg-or-17
+  order -8
+ .lg-or-18
+  order -7
+ .lg-or-19
+  order -6
+ .lg-or-20
+  order -5
+ .lg-or-21
+  order -4
+ .lg-or-22
+  order -3
+ .lg-or-23
+  order -2
+ .lg-or-24
+  order -1
 
 /* Extra Large Breakpoint */
 @media (min-width: xlBreakpoint)
-  // Large Column Size
-  .xl-sz-1
-    flex 0, 1, 4.166666666666666%
-    width 4.166666666666666%
-  .xl-sz-2
-    flex 0, 1, 8.333333333333333%
-    width 8.333333333333333%
-  .xl-sz-3
-    flex 0, 1, 12.5%
-    width 12.5%
-  .xl-sz-4
-    flex 0, 1, 16.666666666666666%
-    width 16.666666666666666%
-  .xl-sz-5
-    flex 0, 1, 20.833333333333333%
-    width 20.833333333333333%
-  .xl-sz-6
-    flex 0, 1, 25%
-    width 25%
-  .xl-sz-7
-    flex 0, 1, 29.166666666666666%
-    width 29.166666666666666%
-  .xl-sz-8
-    flex 0, 1, 33.333333333333333%
-    width 33.333333333333333%
-  .xl-sz-9
-    flex 0, 1, 37.5%
-    width 37.5%
-  .xl-sz-10
-    flex 0, 1, 41.666666666666666%
-    width 41.666666666666666%
-  .xl-sz-11
-    flex 0, 1, 45.833333333333333%
-    width 45.833333333333333%
-  .xl-sz-12
-    flex 0, 1, 50%
-    width 50%
-  .xl-sz-13
-    flex 0, 1, 54.166666666666666%
-    width 54.166666666666666%
-  .xl-sz-14
-    flex 0, 1, 58.333333333333333%
-    width 58.333333333333333%
-  .xl-sz-15
-    flex 0, 1, 62.5%
-    width 62.5%
-  .xl-sz-16
-    flex 0, 1, 66.666666666666666%
-    width 66.666666666666666%
-  .xl-sz-17
-    flex 0, 1, 70.833333333333333%
-    width 70.833333333333333%
-  .xl-sz-18
-    flex 0, 1, 75%
-    width 75%
-  .xl-sz-19
-    flex 0, 1, 79.166666666666666%
-    width 79.166666666666666%
-  .xl-sz-20
-    flex 0, 1, 83.333333333333333%
-    width 83.333333333333333%
-  .xl-sz-21
-    flex 0, 1, 87.5%
-    width 87.5%
-  .xl-sz-22
-    flex 0, 1, 91.666666666666666%
-    width 91.666666666666666%
-  .xl-sz-23
-    flex 0, 1, 95.833333333333333%
-    width 95.833333333333333%
-  .xl-sz-24
-    flex 0, 1, 100%
-    width 100%
-  // Extra Large Column Order
-  .xl-or-1
-    order -24
-  .xl-or-2
-    order -23
-  .xl-or-3
-    order -22
-  .xl-or-4
-    order -21
-  .xl-or-5
-    order 20
-  .xl-or-6
-    order -19
-  .xl-or-7
-    order -18
-  .xl-or-8
-    order -17
-  .xl-or-9
-    order -16
-  .xl-or-10
-    order -15
-  .xl-or-11
-    order -14
-  .xl-or-12
-    order -13
-  .xl-or-13
-    order -12
-  .xl-or-14
-    order -11
-  .xl-or-15
-    order -10
-  .xl-or-16
-    order -9
-  .xl-or-17
-    order -8
-  .xl-or-18
-    order -7
-  .xl-or-19
-    order -6
-  .xl-or-20
-    order -5
-  .xl-or-21
-    order -4
-  .xl-or-22
-    order -3
-  .xl-or-23
-    order -2
-  .xl-or-24
-    order -1
+ // Large Column Size
+ .xl-sz-1
+  flex 0, 1, 4.166666666666666%
+  width 4.166666666666666%
+ .xl-sz-2
+  flex 0, 1, 8.333333333333333%
+  width 8.333333333333333%
+ .xl-sz-3
+  flex 0, 1, 12.5%
+  width 12.5%
+ .xl-sz-4
+  flex 0, 1, 16.666666666666666%
+  width 16.666666666666666%
+ .xl-sz-5
+  flex 0, 1, 20.833333333333333%
+  width 20.833333333333333%
+ .xl-sz-6
+  flex 0, 1, 25%
+  width 25%
+ .xl-sz-7
+  flex 0, 1, 29.166666666666666%
+  width 29.166666666666666%
+ .xl-sz-8
+  flex 0, 1, 33.333333333333333%
+  width 33.333333333333333%
+ .xl-sz-9
+  flex 0, 1, 37.5%
+  width 37.5%
+ .xl-sz-10
+  flex 0, 1, 41.666666666666666%
+  width 41.666666666666666%
+ .xl-sz-11
+  flex 0, 1, 45.833333333333333%
+  width 45.833333333333333%
+ .xl-sz-12
+  flex 0, 1, 50%
+  width 50%
+ .xl-sz-13
+  flex 0, 1, 54.166666666666666%
+  width 54.166666666666666%
+ .xl-sz-14
+  flex 0, 1, 58.333333333333333%
+  width 58.333333333333333%
+ .xl-sz-15
+  flex 0, 1, 62.5%
+  width 62.5%
+ .xl-sz-16
+  flex 0, 1, 66.666666666666666%
+  width 66.666666666666666%
+ .xl-sz-17
+  flex 0, 1, 70.833333333333333%
+  width 70.833333333333333%
+ .xl-sz-18
+  flex 0, 1, 75%
+  width 75%
+ .xl-sz-19
+  flex 0, 1, 79.166666666666666%
+  width 79.166666666666666%
+ .xl-sz-20
+  flex 0, 1, 83.333333333333333%
+  width 83.333333333333333%
+ .xl-sz-21
+  flex 0, 1, 87.5%
+  width 87.5%
+ .xl-sz-22
+  flex 0, 1, 91.666666666666666%
+  width 91.666666666666666%
+ .xl-sz-23
+  flex 0, 1, 95.833333333333333%
+  width 95.833333333333333%
+ .xl-sz-24
+  flex 0, 1, 100%
+  width 100%
+ // Extra Large Column Order
+ .xl-or-1
+  order -24
+ .xl-or-2
+  order -23
+ .xl-or-3
+  order -22
+ .xl-or-4
+  order -21
+ .xl-or-5
+  order 20
+ .xl-or-6
+  order -19
+ .xl-or-7
+  order -18
+ .xl-or-8
+  order -17
+ .xl-or-9
+  order -16
+ .xl-or-10
+  order -15
+ .xl-or-11
+  order -14
+ .xl-or-12
+  order -13
+ .xl-or-13
+  order -12
+ .xl-or-14
+  order -11
+ .xl-or-15
+  order -10
+ .xl-or-16
+  order -9
+ .xl-or-17
+  order -8
+ .xl-or-18
+  order -7
+ .xl-or-19
+  order -6
+ .xl-or-20
+  order -5
+ .xl-or-21
+  order -4
+ .xl-or-22
+  order -3
+ .xl-or-23
+  order -2
+ .xl-or-24
+  order -1
