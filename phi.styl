@@ -18,8 +18,6 @@
  content ""
  display table
  clear both
-.row-reverse
- flex-direction row-reverse
 
 .col
  display flex
@@ -27,11 +25,15 @@
  flex-direction(column)
  float left
  padding colGutter(gutter)
-.col-reverse
- flex-direction column-reverse
 
 /* Extra Small Breakpoint */
 @media (min-width: 1px)
+ // Extra Small Column Reverse
+ .xs-col-re
+  flex-direction column-reverse
+ // Extra Small Row Reverse
+ .xs-row-re
+  flex-direction row-reverse
  // Extra Small Column Size
  .xs-sz-1
   flex 0 1 4.166666666666666%
@@ -157,6 +159,12 @@
 
 /* Small Breakpoint */
 @media (min-width: smBreakpoint)
+ // Small Column Reverse
+ .sm-col-re
+  flex-direction column-reverse
+ // Small Row Reverse
+ .sm-row-re
+  flex-direction row-reverse
  // Small Column Size
  .sm-sz-1
   flex 0 1 4.166666666666666%
@@ -282,6 +290,12 @@
 
 /* Medium Breakpoint */
 @media (min-width: mdBreakpoint)
+ // Medium Column Reverse
+ .md-col-re
+  flex-direction column-reverse
+ // Medium Row Reverse
+ .md-row-re
+  flex-direction row-reverse
  // Medium Column Size
  .md-sz-1
   flex 0 1 4.166666666666666%
@@ -407,6 +421,12 @@
 
 /* Large Breakpoint */
 @media (min-width: lgBreakpoint)
+ // Large Column Reverse
+ .lg-col-re
+  flex-direction column-reverse
+ // Large Row Reverse
+ .lg-row-re
+  flex-direction row-reverse
  // Large Column Size
  .lg-sz-1
   flex 0 1 4.166666666666666%
@@ -532,6 +552,12 @@
 
 /* Extra Large Breakpoint */
 @media (min-width: xlBreakpoint)
+ // Extra Large Column Reverse
+ .xl-col-re
+  flex-direction column-reverse
+ // Extra Large Row Reverse
+ .xl-row-re
+  flex-direction row-reverse
  // Large Column Size
  .xl-sz-1
   flex 0, 1, 4.166666666666666%
