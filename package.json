@@ -1,0 +1,24 @@
+{
+  "name": "golden",
+  "version": "0.0.1",
+  "description": "A CSS layout library.",
+  "main": "lib/golden.js",
+  "scripts": {
+    "babel-lib": "babel tmp/src -d lib",
+    "typescript": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CASEYJAYMARTIN/Golden.git"
+  },
+  "author": "Casey Jay Martin",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/CASEYJAYMARTIN/Golden/issues"
+  },
+  "homepage": "https://github.com/CASEYJAYMARTIN/Golden#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "typescript": "^2.0.10"
+  }
+}

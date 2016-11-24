@@ -1,1 +1,4 @@
 *.css
+lib/
+node_modules/
+tmp/
